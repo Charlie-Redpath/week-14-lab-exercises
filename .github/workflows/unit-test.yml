@@ -1,0 +1,16 @@
+name: Running Unit Tests
+run-name: Running Unit Tests
+
+on: [push]
+
+jobs:
+  Test-Insecure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: npm install
+        working-directory: unittesting
+        run: npm install
+      - name: Test
+        working-directory: unittesting
+        run: npm test
