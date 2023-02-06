@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Testing for insecure libraries
 run-name: Testing for insecure libraries
 
 on: [push]
@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Checking for insecure libraries"
+      - name: npm install
+        working-directory: insecure
+        run: npm install
       - name: npm audit
-        working-directory: ./insecure
+        working-directory: insecure
         run: npm audit --json > ./npm-audit.json
