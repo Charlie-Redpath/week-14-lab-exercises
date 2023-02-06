@@ -11,6 +11,6 @@ jobs:
       - name: npm install
         working-directory: mashup
         run: npm install
-      - name: Eslint
+      - name: Lint
         working-directory: mashup
-        run: npm eslint index.js
+        run: npm run lint index.js
