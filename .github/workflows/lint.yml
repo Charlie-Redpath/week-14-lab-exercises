@@ -1,0 +1,19 @@
+name: Checking for 'mashed' JS
+run-name: Checking for 'mashed' JS
+
+on: [push]
+
+jobs:
+  Test-Insecure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: npm install
+        working-directory: mashup
+        run: npm install
+      - name: Install jslint
+        working-directory: mashup
+        run: npm install jslint
+      - name: Lint js
+        working-directory: mashup
+        run: jslint index.js
