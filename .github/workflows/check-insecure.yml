@@ -7,7 +7,7 @@ jobs:
   Test-Insecure:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Checking for insecure libraries"
+      - uses: actions/checkout@v2
       - name: npm install
         working-directory: insecure
         run: npm install
