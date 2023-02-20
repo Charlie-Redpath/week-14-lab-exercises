@@ -14,3 +14,10 @@ jobs:
       - name: Lint
         working-directory: mashup
         run: npm run lint index.js
+
+      - name: npm install
+        working-directory: combined
+        run: npm install
+      - name: Lint
+        working-directory: combined
+        run: npm run lint index.js

@@ -14,3 +14,10 @@ jobs:
       - name: npm audit
         working-directory: insecure
         run: npm audit
+
+      - name: npm install
+        working-directory: combined
+        run: npm install
+      - name: npm audit
+        working-directory: combined
+        run: npm audit
